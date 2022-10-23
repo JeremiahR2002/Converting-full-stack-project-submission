@@ -1,7 +1,11 @@
-const router = require('express').Router()
+const express = require('express')
+const router = express.Router()
+
+const { BlogPost } = require('../models')
+
 
 router.get('/', (req, res) => {
-    db.Place.find()
+    db.Router.find()
     .then((router) => {
       res.render('router/index', { router })
     })
@@ -12,7 +16,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    db.Place.create(req.body)
+    db.Router.create(req.body)
     .then(() => {
         res.redirect('/router')
     })
@@ -21,5 +25,8 @@ router.post('/', (req, res) => {
         res.render('error404')
     })
   })
+
+
+
 
 module.exports = router

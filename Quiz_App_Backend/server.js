@@ -5,14 +5,14 @@ const app = express()
 const router = require('./controllers/router')
 
 
- app.use('/router', router)
+app.use('/router', router)
 
 app.get('/', (req, res) => {
-    res.render('SUP G')
+    res.render('home')
 })
 
 app.get('*', (req, res) => {
-    res.render()
+    res.render('quizzes')
 })
 
 app.get('*', (req, res) => {
