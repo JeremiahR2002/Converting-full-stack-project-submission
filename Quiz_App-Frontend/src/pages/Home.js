@@ -3,6 +3,12 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 export function Home() {
+
+  const getData = () => {
+    console.log("We got clicked!");
+    window.location.assign("http://localhost:3000/Quiz");
+  }
+
 return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -12,11 +18,12 @@ return (
           Enter your Display Name and proceed!
         </Form.Text>
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button onClick={getData}  variant="primary" >
         Submit
       </Button>
     </Form>
+
   );
 }
 
-    
+  

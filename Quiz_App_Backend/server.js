@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const app = express();
 const router = require('./controller/router')
 
+
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
     () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
   )
