@@ -7,5 +7,9 @@ content: {
 }
 })
 
+
+module.exports.Router 
+
 const Names = mongoose.model("names", namesSchema);
 module.exports = Names;
+

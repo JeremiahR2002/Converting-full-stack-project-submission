@@ -1,7 +1,10 @@
+const { urlencoded } = require('express');
 const express = require('express')
 const router = express.Router()
 
-//const { BlogPost } = require('../models')
+const MongoNames = require('../models/Names');
+const MongoQuestion = require('../models/Question');
+
 
 
 router.get('/', (req, res) => {
@@ -26,7 +29,17 @@ router.post('/', (req, res) => {
     })
   })
 
+  router.get('/Name', (req, res) => {
+    res.render('models/Name')
+  })
 
-
+  router.get('/result', (req, res) => {
+    res.render('result')
+  });
+  
+  router.get('/Question', (req, res) => {
+    res.render('models/Question')
+  })
+  
 
 module.exports = router

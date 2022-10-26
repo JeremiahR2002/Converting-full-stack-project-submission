@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const app = express();
 const router = require('./controller/router')
 
-
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
     () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
   )
@@ -19,10 +18,6 @@ app.get('/', (req, res) => {
 
 app.get('*', (req, res) => {
     res.render('quizzes')
-})
-
-app.get('*', (req, res) => {
-    res.render('result')
 })
 
 app.get('*', (req, res) => {
