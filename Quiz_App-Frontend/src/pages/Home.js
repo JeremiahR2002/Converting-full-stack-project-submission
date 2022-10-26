@@ -18,7 +18,8 @@ return (
           Enter your Display Name and proceed!
         </Form.Text>
       </Form.Group>
-      <Button onClick={getData}  variant="primary" >
+      <Button onClick={getData}  variant="primary">
+
         Submit
       </Button>
     </Form>
