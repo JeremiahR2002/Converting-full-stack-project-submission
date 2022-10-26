@@ -5,8 +5,7 @@ const router = express.Router()
 const MongoNames = require('../models/Names');
 const MongoQuestion = require('../models/Question');
 
-router.fetch(url)
-});
+
 
 router.get('/', (req, res) => {
     db.Router.find()
