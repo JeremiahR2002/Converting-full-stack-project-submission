@@ -1,7 +1,6 @@
 import Form from 'react-bootstrap/Form';
 
-export function Quiz() {
-    const response = fetch(url);
+const response = fetch(url);
     fetch(url)
         .then(response => {
             // handle the response
@@ -12,13 +11,15 @@ export function Quiz() {
 
 
 
-    return <h1>Quiz goes here!</h1>
-}
-
+   
 
 // front-end fetch data from back-end 
-// 
+// daniel is gonna help with smacking the routers
 
+
+
+export function Quiz() {
+    
     return (
         <Form>
         {[ 'radio' ].map((type) => (

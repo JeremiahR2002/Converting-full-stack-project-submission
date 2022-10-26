@@ -24,6 +24,5 @@ const Question = mongoose.model("questions", questionSchema);
 
 
 module.exports.Router 
-=======
 module.exports = Question;
 
