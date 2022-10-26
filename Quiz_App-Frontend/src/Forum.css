@@ -1,0 +1,13 @@
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 200px 250px;
+    grid-template-rows: minmax(150px, auto);
+    grid-gap: 20px;
+    grid-template-areas: "header header"
+}
+
+.grid-item-1 {
+    grid-area: 'header';
+} */
+
+/* Start here noah! this video can help you for what idea i had for the Quiz.js, https://www.youtube.com/watch?v=9zBsdzdE4sM . in the Quiz.js i also put down multiple choice questions already
