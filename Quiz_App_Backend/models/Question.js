@@ -5,4 +5,4 @@ const questionSchema = new Schema({
 
 })
 
-module.exports.Router = require('./router')
+module.exports.Router 

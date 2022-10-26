@@ -22,6 +22,10 @@ app.get('*', (req, res) => {
 })
 
 app.get('*', (req, res) => {
+    res.render('result')
+})
+
+app.get('*', (req, res) => {
     res.render('<h1>404 Page </h1>')
 })
 
