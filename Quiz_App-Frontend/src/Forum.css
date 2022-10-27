@@ -10,4 +10,27 @@
     grid-area: 'header';
 } */
 
-/* Start here noah! this video can help you for what idea i had for the Quiz.js, https://www.youtube.com/watch?v=9zBsdzdE4sM . in the Quiz.js i also put down multiple choice questions already
+/* Start here noah! this video can help you for what idea i had for the Quiz.js, https://www.youtube.com/watch?v=9zBsdzdE4sM . in the Quiz.js i also put down multiple choice questions already*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 200px 250px;
+    grid-template-rows: minmax(150px auto);
+    grid-gap: 20px;
+    grid-template-areas:
+    "header header"
+    "sidebar sidebar"
+    "sidebar sidebar"
+}
+
+.grid-item-1{
+    grid-column: 1 / -1;
+}
+
+.grid-item-2{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.grid-item-3{
+    grid-area: sidebar;
+}
