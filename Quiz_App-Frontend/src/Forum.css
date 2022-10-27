@@ -1,13 +1,23 @@
-/* .grid-container {
+/* Start here noah! this video can help you for what idea i had for the Quiz.js, https://www.youtube.com/watch?v=9zBsdzdE4sM . in the Quiz.js i also put down multiple choice questions already*/
+.grid-container{
     display: grid;
     grid-template-columns: 200px 250px;
-    grid-template-rows: minmax(150px, auto);
+    grid-template-rows: minmax(150px auto);
     grid-gap: 20px;
-    grid-template-areas: "header header"
+    grid-template-areas:
+    "header header"
+    "sidebar sidebar"
+    "sidebar sidebar"
 }
 
-.grid-item-1 {
-    grid-area: 'header';
-} */
+.grid-item-1{
+    grid-area: header;
+}
 
-/* Start here noah! this video can help you for what idea i had for the Quiz.js, https://www.youtube.com/watch?v=9zBsdzdE4sM . in the Quiz.js i also put down multiple choice questions already
+.grid-item-2{
+    grid-area: sidebar;
+}
+
+.grid-item-3{
+    grid-area: sidebar;
+}

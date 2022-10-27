@@ -1,5 +1,23 @@
 import Form from 'react-bootstrap/Form';
 
+const response = fetch(url);
+    fetch(url)
+        .then(response => {
+            // handle the response
+        })
+        .catch(error => {
+            // handle the error
+        });
+
+
+
+   
+
+// front-end fetch data from back-end 
+// daniel is gonna help with smacking the routers
+
+
+
 export function Quiz() {
     
     return (
@@ -39,3 +57,4 @@ export function Quiz() {
       </Form>
     )
 }
+
