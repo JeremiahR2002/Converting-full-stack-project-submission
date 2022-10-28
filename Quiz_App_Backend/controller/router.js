@@ -25,17 +25,7 @@ router.post('/', (req, res) => {
     })
   })
 
-  router.get('/Name', (req, res) => {
-    res.render(MongoNames)
-  })
 
-  router.get('/result', (req, res) => {
-    res.render('result')
-  });
-  
-  router.get('/Question', (req, res) => {
-    res.render(MongoQuestion)
-  })
   
 
 module.exports = router

@@ -1,12 +1,32 @@
 # Project_2_Quiz_App
-What do you do in your free time? A. Go Hiking B. Staying inside and having a drink C. Taking a long nap D. Going out with friends
 
-Do you like socializing? A. Yes B. No C. All the time D. What’s socializing
+What do you do in your free time?
+A.	Go Hiking
+B.	Staying inside and having a drink
+C.	Taking a long nap
+D.	Going out with friends
 
-Choose which one you like more? A. Autumn B. Spring
+Do you like socializing?
+A.	Yes
+B.	No
+C.	All the time
+D.	What’s socializing
 
-What is your favorite drink at the bar? A. Gin/tonic B. ‘tequila shots C. Martini D. Beer
+Choose which one you like more?
+A.	Autumn
+B.	Spring
 
-Which do you prefer? A. City B. Country
+What is your favorite drink at the bar?
+A.	Gin/tonic
+B.	‘tequila shots
+C.	Martini
+D.	Beer
 
-How would you describe your personality? A. Introvert B. Extravert
+Which do you prefer?
+A.	City
+B.	Country
+
+How would you describe your personality?
+A.	Introvert
+B.	Extravert
+
