@@ -1,3 +1,4 @@
+import { Grid } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 
 const response = fetch(url);
@@ -57,4 +58,3 @@ export function Quiz() {
       </Form>
     )
 }
-
