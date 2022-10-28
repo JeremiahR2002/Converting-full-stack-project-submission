@@ -1,5 +1,6 @@
 import Form from 'react-bootstrap/Form';
 
+<<<<<<< HEAD
 // const response = fetch(url);
 //     fetch(url)
 //         .then(response => {
@@ -8,18 +9,27 @@ import Form from 'react-bootstrap/Form';
 //         .catch(error => {
 //             // handle the error
 //         });
+=======
+
+    // const response = fetch(url);
+    // fetch(url)
+    //     .then(response => {
+    //         // handle the response
+    //     })
+    //     .catch(error => {
+    //         // handle the error
+    //     });
+>>>>>>> e453cdad44fa8f7376ee3e86e8f930ad7637bd39
 
 
 
-   
+    // return <h1>Quiz goes here!</h1>
+
+
 
 // front-end fetch data from back-end 
-// daniel is gonna help with smacking the routers
-
-
-
+// 
 export function Quiz() {
-    
     return (
         <Form>
         {[ 'radio' ].map((type) => (
