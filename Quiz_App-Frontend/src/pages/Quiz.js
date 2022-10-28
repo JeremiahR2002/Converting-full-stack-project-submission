@@ -1,3 +1,4 @@
+import { Grid } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 
 
@@ -56,4 +57,3 @@ export function Quiz() {
       </Form>
     )
 }
-

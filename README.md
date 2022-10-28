@@ -1,4 +1,5 @@
 # Project_2_Quiz_App
+
 What do you do in your free time?
 A.	Go Hiking
 B.	Staying inside and having a drink
@@ -28,3 +29,4 @@ B.	Country
 How would you describe your personality?
 A.	Introvert
 B.	Extravert
+
