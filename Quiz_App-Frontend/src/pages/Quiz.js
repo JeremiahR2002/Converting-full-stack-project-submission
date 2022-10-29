@@ -1,36 +1,40 @@
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
-<<<<<<< HEAD
-// const response = fetch(url);
-//     fetch(url)
-//         .then(response => {
-//             // handle the response
-//         })
-//         .catch(error => {
-//             // handle the error
-//         });
-=======
-
-    // const response = fetch(url);
-    // fetch(url)
-    //     .then(response => {
-    //         // handle the response
-    //     })
-    //     .catch(error => {
-    //         // handle the error
-    //     });
->>>>>>> e453cdad44fa8f7376ee3e86e8f930ad7637bd39
-
-
-
-    // return <h1>Quiz goes here!</h1>
-
-
-
-// front-end fetch data from back-end 
-// 
 export function Quiz() {
+  let array = [0,];
+  console.log(array);
+
+  const catquestion = () => {
+    array.push(0);
+    console.log(array);
+  }
+
+  const dogquestion = () => {
+    array.push(10);
+    console.log(array);
+  }
+
+  const answer = () => {
+  let sum = 0;
+
+  for (let num of array) {
+    sum = sum + num
+  }
+  
+  console.log(sum);
+  
+  if (sum <= 29) {
+    window.location.href = "http://localhost:3000/cat";
+  }
+  else if (sum => 31) {
+    window.location.href = "http://localhost:3000/dog";
+  }
+}
+
+
     return (
+      <>
         <Form>
         {[ 'radio' ].map((type) => (
           <div key={`inline-${type}`} className="mb-3">
@@ -40,6 +44,7 @@ export function Quiz() {
               name="group1"
               type={type}
               id={`inline-${type}-1`}
+              onClick={catquestion}
             />
             <Form.Check
               inline
@@ -47,6 +52,7 @@ export function Quiz() {
               name="group1"
               type={type}
               id={`inline-${type}-2`}
+              onClick={dogquestion}
             />
             <Form.Check
               inline
@@ -54,6 +60,7 @@ export function Quiz() {
               name="group1"
               type={type}
               id={`inline-${type}-3`}
+              onClick={catquestion}
             />
             <Form.Check
               inline
@@ -61,10 +68,13 @@ export function Quiz() {
               name="group1"
               type={type}
               id={`inline-${type}-4`}
+              onClick={dogquestion}
             />
           </div>
         ))}
       </Form>
+      <Button onClick={answer} variant="dark">Lets see what you are!</Button>
+      </>
     )
 }
 
