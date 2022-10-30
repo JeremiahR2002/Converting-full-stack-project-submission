@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Comments from '../../../Quiz_App_Backend/models/Comments';
 
 
   const Home = () => {
@@ -18,10 +19,23 @@ import Form from 'react-bootstrap/Form';
           })
         };
       const posts = await fetch('/quizzes', requestOptions)
-      const cleanPosts = await posts.json()
+      //const cleanPosts = await posts.json()
   }
 
 console.log("name", name)
+
+const saveComment = async () => {
+  const requestComments = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      content: Comments,
+    })
+  };
+const posts = await fetch('/quizzes', requestComments)
+//const cleanPosts = await Comments.json()
+}
+console.log('comments', Comments)
 return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
