@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-// import Comments from '../../../Quiz_App_Backend/models/Comments';
+import AllPosts from '../Components/allPosts';
 
 
   const Home = () => {
     console.log("We got clicked!");
     const [name, setName]= useState('')
     const [body, setBody] = useState('')
+    const [comment, setComment] = useState('')
+    const [commentTitle, title] = useState('')
+    const [commentsData, setCommentsData] = useState([])
     
 
     const saveName = async () => {
@@ -24,18 +27,33 @@ import Form from 'react-bootstrap/Form';
 
 console.log("name", name)
 
+const grabComments = async () => {
+  console.log('Grab comments !!!!')
+  const posts = await fetch('/quizzes/comment')
+  const cleanPosts = await posts.json()
+  setCommentsData(cleanPosts)
+}
+
 const saveComment = async () => {
-  const requestComments = {
+  const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      // content: Comments,
+      title: commentTitle,
+      body: comment
     })
   };
-const posts = await fetch('/quizzes', requestComments)
-//const cleanPosts = await Comments.json()
+  const data = await fetch('/quizzes/comment', requestOptions)
+  const cleanData = await data.json()
+  console.log('We saved!', cleanData)
+  grabComments()
 }
-// console.log('comments', Comments)
+
+useEffect(()=> {
+  grabComments()
+},[])
+//console.log('comments', comment)
+console.log('commentsData', commentsData)
 return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -55,16 +73,27 @@ return (
         <Form.Label>Comment Section</Form.Label>
         <Form.Control onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
-          // setComment(e.target.value)
+          title(e.target.value)
+          }} type="commentsection" placeholder="Comment section!" />
+        <Form.Text className="text-muted">
+          Enter your Username!
+        </Form.Text>
+        <Form.Control onChange={(e)=> {
+          console.log('WE R TYPING on change happening!!')
+          setComment(e.target.value)
           }} type="commentsection" placeholder="Comment section!" />
         <Form.Text className="text-muted">
           Enter your comment!
         </Form.Text>
       </Form.Group>
-      <Button id="submitButton"  variant="primary">
+      <Button id="submitButton" onClick={saveComment} variant="primary">
         Submit a comment!
       </Button>
+      <div>
+      <AllPosts comments={commentsData}/>
+    </div> 
     </Form>
+
 
 // pushing test
   );
