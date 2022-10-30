@@ -4,7 +4,7 @@ const router = express.Router()
 
 const MongoNames = require('../models/Names');
 const MongoComments = require('../models/Comments');
-const { default: AllPosts } = require('../../Quiz_App-Frontend/src/Components/allPosts');
+//const { default: AllPosts } = require('../../Quiz_App-Frontend/src/Components/allPosts');
 
 
 
@@ -26,13 +26,13 @@ router.post('/', (req, res) => {
     })
   });
 
-  router.get('/', async (req,res) => {
+  router.get('/comment', async (req,res) => {
     console.log('WE HIT /comments route!!!')
-    const allPosts = await MongoComments.find()
-    res.json(AllPosts)
+    const allComments = await MongoComments.find()
+    res.json(allComments)
   });
   
-  router.post('/', async (req,res) => {
+  router.post('/comment', async (req,res) => {
     console.log('req.body!!', req.body);
     const savedComment = await MongoComments.create(req.body);
     res.json(savedComment)
