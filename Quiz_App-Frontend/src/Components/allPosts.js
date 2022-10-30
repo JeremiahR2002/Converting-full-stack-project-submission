@@ -4,7 +4,7 @@ function AllPosts(props) {
             {props.comments.map((comment)=> {
                 return (
                     <div className={'comment'}>
-                        <h1>{comment.title}</h1>
+                        <h4>{comment.title}</h4>
                         <p>{comment.body}</p>
                     </div>
                 )
