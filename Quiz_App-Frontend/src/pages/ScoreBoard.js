@@ -1,3 +1,6 @@
 export function ScoreBoard() {
-    return <h1>You are...</h1>
+    return (
+    <h1>You are...</h1>
+    
+    )
 }
