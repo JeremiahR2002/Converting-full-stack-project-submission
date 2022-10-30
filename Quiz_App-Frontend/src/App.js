@@ -11,6 +11,7 @@ function App() {
   return (
   <>
   <nav>
+    <h1 className="test">TESTING</h1>
     <ul>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/Quiz">Quiz</Link></li>
@@ -20,7 +21,7 @@ function App() {
     <Route path="/" element={<Home />} />
     <Route path="/Quiz/:name" element={<Quiz />} />
     <Route path="/Cat/:name" element={<Cat />} />
-    <Route path="/Dog/:name" element={<Dog />} />
+    <Route path="/Dog/:name" element={<dog />} />
   </Routes>
     </>
 

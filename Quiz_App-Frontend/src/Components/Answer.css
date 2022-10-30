@@ -4,3 +4,9 @@
     text-align: center;
     bottom: 50px;
 };
+
+.post {
+    border-style: double;
+    color: red;
+    background-color: blue;
+}
