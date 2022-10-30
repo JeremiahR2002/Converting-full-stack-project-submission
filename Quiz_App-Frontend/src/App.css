@@ -1,38 +1,40 @@
-/* .App {
+.comment  {
+  color: red;
+  background-color: white;
+  border-style: double;
+  position: relative;
+  
+
+};
+
+.Answer {
+  position: relative;
+  font-size: 100px;
   text-align: center;
-}
+  color: purple;
+  bottom: 50px;
+};
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.post {
+  border-style: double;
+  color: red;
+  background-color: blue;
+};
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tom-test {
+  color: red;
+  background-color: blue;
+  border-style: double;
 }
+.test  {
+  color: red;
+  background-color: blue;
+  border-style: double;
+};
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.again {
+  color: red;
+  background-color: blue;
+  border-style: double;
+};
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

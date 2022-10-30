@@ -1,4 +1,4 @@
-import '../Answer.css';
+//import '../Answer.css';
 
 export function Dog () {
     return(
