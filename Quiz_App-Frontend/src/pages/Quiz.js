@@ -1,10 +1,13 @@
 import { Grid } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from "react-router-dom";
 
 export function Quiz() {
   let array = [0,];
   console.log(array);
+
+  const Navigate = useNavigate();
 
   const catquestion = () => {
     array.push(0);
@@ -26,10 +29,12 @@ export function Quiz() {
   console.log(sum);
   
   if (sum <= 29) {
-    window.location.href = "http://localhost:3000/cat";
+    // window.location.href = "http://localhost:3000/cat";
+    Navigate("/cat");
   }
   else if (sum => 31) {
-    window.location.href = "http://localhost:3000/dog";
+    // window.location.href = "http://localhost:3000/dog";
+    Navigate("/dog");
   }
 }
 
