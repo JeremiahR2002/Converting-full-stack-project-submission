@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Comments from '../../../Quiz_App_Backend/models/Comments';
+// import Comments from '../../../Quiz_App_Backend/models/Comments';
 
 
   const Home = () => {
@@ -29,13 +29,13 @@ const saveComment = async () => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      content: Comments,
+      // content: Comments,
     })
   };
 const posts = await fetch('/quizzes', requestComments)
 //const cleanPosts = await Comments.json()
 }
-console.log('comments', Comments)
+// console.log('comments', Comments)
 return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -55,7 +55,7 @@ return (
         <Form.Label>Comment Section</Form.Label>
         <Form.Control onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
-          setComment(e.target.value)
+          // setComment(e.target.value)
           }} type="commentsection" placeholder="Comment section!" />
         <Form.Text className="text-muted">
           Enter your comment!
