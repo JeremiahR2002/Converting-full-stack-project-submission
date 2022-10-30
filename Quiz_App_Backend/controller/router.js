@@ -3,7 +3,8 @@ const express = require('express')
 const router = express.Router()
 
 const MongoNames = require('../models/Names');
-const MongoQuestion = require('../models/Question');
+const MongoComments = require('../models/Comments');
+const { default: AllPosts } = require('../../Quiz_App-Frontend/src/Components/allPosts');
 
 
 
@@ -23,19 +24,21 @@ router.post('/', (req, res) => {
         console.log('err', err)
         res.json(err)
     })
-  })
+  });
 
-  router.get('/Name', (req, res) => {
-    res.render(MongoNames)
-  })
-
-  router.get('/result', (req, res) => {
-    res.render('result')
+  router.get('/', async (req,res) => {
+    console.log('WE HIT /comments route!!!')
+    const allPosts = await MongoComments.find()
+    res.json(AllPosts)
   });
   
-  router.get('/Question', (req, res) => {
-    res.render(MongoQuestion)
+  router.post('/', async (req,res) => {
+    console.log('req.body!!', req.body);
+    const savedComment = await MongoComments.create(req.body);
+    res.json(savedComment)
   })
+
+
   
 
 module.exports = router
