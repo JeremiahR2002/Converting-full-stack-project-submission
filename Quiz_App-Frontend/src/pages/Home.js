@@ -10,6 +10,7 @@ import AllPosts from '../Components/allPosts';
     const [body, setBody] = useState('')
     const [comment, setComment] = useState('')
     const [commentTitle, title] = useState('')
+    const [commentsData, setCommentsData] = useState([])
     
 
     const saveName = async () => {
@@ -27,9 +28,10 @@ import AllPosts from '../Components/allPosts';
 console.log("name", name)
 
 const grabComments = async () => {
-  const posts = await fetch('/quizzes')
+  console.log('Grab comments !!!!')
+  const posts = await fetch('/quizzes/comment')
   const cleanPosts = await posts.json()
-  setComment(cleanPosts)
+  setCommentsData(cleanPosts)
 }
 
 const saveComment = async () => {
@@ -50,7 +52,8 @@ const saveComment = async () => {
 useEffect(()=> {
   grabComments()
 },[])
-console.log('comments', comment)
+//console.log('comments', comment)
+console.log('commentsData', commentsData)
 return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -86,9 +89,9 @@ return (
       <Button id="submitButton" onClick={saveComment} variant="primary">
         Submit a comment!
       </Button>
-     {/* <div>
-      <AllPosts comments={comment}/>
-    </div>  */}
+      <div>
+      <AllPosts comments={commentsData}/>
+    </div> 
     </Form>
 
 

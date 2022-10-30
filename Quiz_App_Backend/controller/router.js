@@ -26,10 +26,10 @@ router.post('/', (req, res) => {
     })
   });
 
-  router.get('/', async (req,res) => {
+  router.get('/comment', async (req,res) => {
     console.log('WE HIT /comments route!!!')
-    const allPosts = await MongoComments.find()
-    res.json(AllPosts)
+    const allComments = await MongoComments.find()
+    res.json(allComments)
   });
   
   router.post('/comment', async (req,res) => {
