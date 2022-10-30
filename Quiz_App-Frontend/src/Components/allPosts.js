@@ -1,11 +1,11 @@
 function AllPosts(props) {
     return (
         <div>
-            {props.posts.map((post)=> {
+            {props.comments.map((comment)=> {
                 return (
-                    <div className={'post'}>
-                        <h1>{post.title}</h1>
-                        <p>{post.body}</p>
+                    <div className={'comment'}>
+                        <h1>{comment.title}</h1>
+                        <p>{comment.body}</p>
                     </div>
                 )
             })}
