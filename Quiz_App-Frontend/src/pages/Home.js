@@ -57,34 +57,35 @@ console.log('commentsData', commentsData)
 return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Display Name</Form.Label>
+      <Form.Text className="text-muted">
+          Enter your Display Name and proceed!
+        </Form.Text>
+        <br></br>
         <Form.Control onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           setName(e.target.value)
-          }} type="displayname" placeholder="Enter your display name!" />
-        <Form.Text className="text-muted">
-          Enter your Display Name and proceed!
-        </Form.Text>
+          }} type="displayname" placeholder="Display Name" />
       </Form.Group>
       <Button id="submitButton" onClick={saveName}  variant="primary">
         Submit
       </Button>
+      <br></br>
+      <br></br>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Comment Section</Form.Label>
+        <br></br>
         <Form.Control onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           title(e.target.value)
-          }} type="commentsection" placeholder="Comment section!" />
+          }} type="commentsection" placeholder="Display Name" />
         <Form.Text className="text-muted">
-          Enter your Username!
         </Form.Text>
+        <br></br>
+        <br></br>
         <Form.Control onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           setComment(e.target.value)
-          }} type="commentsection" placeholder="Comment section!" />
-        <Form.Text className="text-muted">
-          Enter your comment!
-        </Form.Text>
+          }} type="commentsection" placeholder="Enter your comment!" />
       </Form.Group>
       <Button id="submitButton" onClick={saveComment} variant="primary">
         Submit a comment!

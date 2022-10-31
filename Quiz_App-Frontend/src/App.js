@@ -11,7 +11,7 @@ function App() {
   return (
   <>
   <nav>
-    <h1 className="test">TESTING</h1>
+    <h1 className="title">Are You a Cat or a Dog?</h1>
     <ul>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/Quiz">Quiz</Link></li>
