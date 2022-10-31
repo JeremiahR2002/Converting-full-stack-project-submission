@@ -11,16 +11,20 @@
 
 .grid-item-1{
     grid-area: header;
+    background-color: blue;
 }
 
 .grid-item-2{
     grid-area: sidebar;
+    background-color: blue;
 }
 
 .grid-item-3{
     grid-area: sidebar;
+    background-color: blue;
 }
 
 .grid-item-4{
     grid-area: sidebar;
+    background-color: blue;
 }

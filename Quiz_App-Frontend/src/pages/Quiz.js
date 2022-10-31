@@ -1,7 +1,13 @@
-import { Grid } from 'react-bootstrap';
+import { Container, grid } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
+
+<div class= "grid-container">
+  <div class = "grid-item"></div>
+  <div class = "grid-item"></div>
+</div>
+
 
 export function Quiz() {
   let array = [0,];
@@ -43,7 +49,7 @@ export function Quiz() {
       <>
         <Form>
         {[ 'radio' ].map((type) => (
-          <div key={`inline-${type}`} className="mb-3">
+          <div key={`inline-${type}`} className="grid-container">
             <Form.Check
               inline
               label="Totally!"
@@ -55,6 +61,7 @@ export function Quiz() {
             <Form.Check
               inline
               label="2"
+              link href = "./Forum.css"
               name="group1"
               type={type}
               id={`inline-${type}-2`}
@@ -83,3 +90,6 @@ export function Quiz() {
       </>
     )
 }
+
+
+export default Quiz
