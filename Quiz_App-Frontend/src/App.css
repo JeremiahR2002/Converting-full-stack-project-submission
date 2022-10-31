@@ -1,40 +1,18 @@
 .comment  {
   color: red;
   background-color: white;
-  border-style: double;
+  border: 3px dashed;
   position: relative;
+  display: block;
+  height: 150px
   
 
 };
 
-.Answer {
-  position: relative;
-  font-size: 100px;
-  text-align: center;
-  color: purple;
-  bottom: 50px;
-};
-
-.post {
-  border-style: double;
-  color: red;
-  background-color: blue;
-};
-
-.tom-test {
-  color: red;
-  background-color: blue;
-  border-style: double;
-}
-.test  {
+.title  {
   color: red;
   background-color: blue;
   border-style: double;
 };
 
-.again {
-  color: red;
-  background-color: blue;
-  border-style: double;
-};
 
