@@ -2,12 +2,7 @@ import { Container, grid } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
-
-<div class= "grid-container">
-  <div class = "grid-item"></div>
-  <div class = "grid-item"></div>
-</div>
-
+import questions from './questions';
 
 export function Quiz() {
   let array = [0,];
@@ -90,6 +85,5 @@ export function Quiz() {
       </>
     )
 }
-
 
 export default Quiz
