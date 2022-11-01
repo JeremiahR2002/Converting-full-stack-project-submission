@@ -14,12 +14,12 @@ function App() {
   <nav>
     <h1 className="title">Are You a Cat or a Dog?</h1>
     <ul>
-      <li><Link to="/">Home</Link></li>
+      {/* <li><Link to="/">Home</Link></li> */}
       <body>
         <script src="Forum.css"></script>
         <div id="grid"></div>
       </body>
-      <li class = "grid-container"><Link to="/Quiz">Quiz</Link></li>
+      {/* <li class = "grid-container"><Link to="/Quiz">Quiz</Link></li> */}
     </ul>
   </nav>
   <body>
