@@ -4,7 +4,7 @@ const router = express.Router()
 
 const MongoNames = require('../models/Names');
 const MongoComments = require('../models/Comments');
-//const { default: AllPosts } = require('../../Quiz_App-Frontend/src/Components/allPosts');
+// const { default: AllPosts } = require('../../Quiz_App-Frontend/src/Components/allPosts');
 
 
 
