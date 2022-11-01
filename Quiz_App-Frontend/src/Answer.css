@@ -1,4 +1,9 @@
-
+.Images {
+ text-align: center;
+ position: relative;
+ left: 750px;
+ height: 500px;
+}
 
 .Answer {
     position: relative;
@@ -52,3 +57,20 @@
     bottom: 35px;
     font-family: "Times New Roman", Times, serif;
 }
+
+.SadMonk {
+    position: relative;
+    text-align: center;
+    bottom: 40px;
+}
+
+.MonkPicture {
+    position: relative;
+    left: 650px;
+}
+.CatImages {
+    text-align: center;
+    position: relative;
+    left: 500px;
+    height: 500px;
+   }
