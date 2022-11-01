@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
 import AllPosts from '../Components/allPosts';
 
 
@@ -12,7 +13,10 @@ import AllPosts from '../Components/allPosts';
     const [commentTitle, title] = useState('')
     const [commentsData, setCommentsData] = useState([])
     
-
+    const navigate = useNavigate()
+    function navigateToQuiz(){
+      navigate("/Quiz")
+    };
     const saveName = async () => {
         const requestOptions = {
           method: 'POST',
@@ -24,7 +28,8 @@ import AllPosts from '../Components/allPosts';
       const posts = await fetch('/quizzes', requestOptions)
       //const cleanPosts = await posts.json()
       document.getElementById('displayNameBox').value=""
-      alert("Display name has been saved!!")
+      navigateToQuiz();
+
   }
 
 console.log("name", name)
