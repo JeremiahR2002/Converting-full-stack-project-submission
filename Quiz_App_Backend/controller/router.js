@@ -4,7 +4,7 @@ const router = express.Router()
 
 const MongoNames = require('../models/Names');
 const MongoComments = require('../models/Comments');
-//const { default: AllPosts } = require('../../Quiz_App-Frontend/src/Components/allPosts');
+// const { default: AllPosts } = require('../../Quiz_App-Frontend/src/Components/allPosts');
 
 
 
@@ -38,6 +38,22 @@ router.post('/', (req, res) => {
     res.json(savedComment)
   })
 
-  
+  router.delete('/comment', async (req,res) => {
+    console.log('req.body!!', req.body);
+    const savedComment = await MongoComments.create(req.body);
+    res.json(deleteComment)
+  })
+
+  router.get('/cat', (req, res) => {
+    res.json('router/cat')
+  })
+
+  router.get('/dog', (req, res) => {
+    res.json('router/dog')
+  })
+
+  router.get('/monkey', (req, res) => {
+    res.json('router/monkey')
+  })
 
 module.exports = router
