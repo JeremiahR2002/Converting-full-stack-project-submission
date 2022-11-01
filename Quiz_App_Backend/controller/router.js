@@ -52,8 +52,8 @@ router.post('/', (req, res) => {
     res.json('router/dog')
   })
 
-  router.get('/monkey', (req, res) => {
-    res.json('router/monkey')
+  router.get('/sad', (req, res) => {
+    res.json('router/sad')
   })
 
 module.exports = router

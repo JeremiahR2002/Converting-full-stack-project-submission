@@ -95,9 +95,10 @@ return (
       <Button id="submitButton" onClick={saveComment} variant="primary">
         Submit a comment!
       </Button>
-      <div>
+      <Form.Text>
+      <h3>Comments</h3>
       <AllPosts comments={commentsData}/>
-    </div> 
+    </Form.Text>
     </Form>
 
 
