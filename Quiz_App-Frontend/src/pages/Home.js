@@ -66,19 +66,14 @@ console.log('commentsData', commentsData)
 return (
     <Form className='Standard'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Text className="text-muted">
-          Enter your Display Name and proceed!
+      <Form.Text className="text-muted">
+          Enter your Name and lets see!
         </Form.Text>
         <br></br>
-        <Form.Control
-          id="displayNameBox"
-          onChange={(e) => {
-            console.log("WE R TYPING on change happening!!");
-            setName(e.target.value);
-          }}
-          type="displayname"
-          placeholder="Display Name"
-        />
+        <Form.Control id="displayNameBox" onChange={(e)=> {
+          console.log('WE R TYPING on change happening!!')
+          setName(e.target.value)
+          }} type="displayname" placeholder="Name" />
       </Form.Group>
       <Button className="Button"id="submitButton" onClick={saveName}  variant="primary">
         Submit
@@ -86,7 +81,7 @@ return (
       <br></br>
       <br></br>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Comment Section</Form.Label>
+        <Form.Label>Enter a comment here!</Form.Label>
         <br></br>
         <Form.Control
           id="commentNameBox"
