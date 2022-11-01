@@ -23,6 +23,8 @@ import AllPosts from '../Components/allPosts';
         };
       const posts = await fetch('/quizzes', requestOptions)
       //const cleanPosts = await posts.json()
+      document.getElementById('displayNameBox').value=""
+      alert("Display name has been saved!!")
   }
 
 console.log("name", name)
@@ -47,11 +49,14 @@ const saveComment = async () => {
   const cleanData = await data.json()
   console.log('We saved!', cleanData)
   grabComments()
+  document.getElementById('commentBox').value=""
+  document.getElementById('commentNameBox').value=""
 }
 
 useEffect(()=> {
   grabComments()
 },[])
+
 //console.log('comments', comment)
 console.log('commentsData', commentsData)
 return (
@@ -61,7 +66,7 @@ return (
           Enter your Display Name and proceed!
         </Form.Text>
         <br></br>
-        <Form.Control onChange={(e)=> {
+        <Form.Control id="displayNameBox" onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           setName(e.target.value)
           }} type="displayname" placeholder="Display Name" />
@@ -74,7 +79,7 @@ return (
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Comment Section</Form.Label>
         <br></br>
-        <Form.Control onChange={(e)=> {
+        <Form.Control id="commentNameBox" onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           title(e.target.value)
           }} type="commentsection" placeholder="Display Name" />
@@ -82,7 +87,7 @@ return (
         </Form.Text>
         <br></br>
         <br></br>
-        <Form.Control onChange={(e)=> {
+        <Form.Control id="commentBox" onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           setComment(e.target.value)
           }} type="commentsection" placeholder="Enter your comment!" />
@@ -90,15 +95,15 @@ return (
       <Button id="submitButton" onClick={saveComment} variant="primary">
         Submit a comment!
       </Button>
-      <div>
+      <Form.Text>
+      <h3>Comments</h3>
       <AllPosts comments={commentsData}/>
-    </div> 
+    </Form.Text>
     </Form>
 
 
 // pushing test
   );
-}
-
+        }
   
 export default Home

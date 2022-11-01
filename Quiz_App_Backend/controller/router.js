@@ -40,8 +40,8 @@ router.post('/', (req, res) => {
 
   router.delete('/comment', async (req,res) => {
     console.log('req.body!!', req.body);
-    const savedComment = await MongoComments.create(req.body);
-    res.json(deleteComment)
+    const deletedComment = await MongoComments.deleteOne(req.body);
+    res.json(deletedComment)
   })
 
   router.get('/cat', (req, res) => {
@@ -52,8 +52,8 @@ router.post('/', (req, res) => {
     res.json('router/dog')
   })
 
-  router.get('/monkey', (req, res) => {
-    res.json('router/monkey')
+  router.get('/sad', (req, res) => {
+    res.json('router/sad')
   })
 
 module.exports = router
