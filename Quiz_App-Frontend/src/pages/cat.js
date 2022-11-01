@@ -1,9 +1,14 @@
-import '../Answer.css';
-import { useParams } from 'react-router-dom';
+//import '../Answer.css';
 
-export function Cat () {
-    let { id } = useParams();
-    return(
-        <h1 className="Answer"> {id}, You are a Cat!</h1>
-    )
+export function Cat() {
+  return (
+    <>
+      <h1 className="Answer">You are a Cat!</h1>
+      <img
+        className="answerPicture"
+        src="http://placekitten.com/500/500"
+        alt="kitten"
+      />
+    </>
+  );
 }

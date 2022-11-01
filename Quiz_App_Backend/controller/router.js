@@ -26,19 +26,34 @@ router.post('/', (req, res) => {
     })
   });
 
-  router.get('/', async (req,res) => {
+  router.get('/comment', async (req,res) => {
     console.log('WE HIT /comments route!!!')
-    const allPosts = await MongoComments.find()
-    res.json(AllPosts)
+    const allComments = await MongoComments.find()
+    res.json(allComments)
   });
   
-  router.post('/', async (req,res) => {
+  router.post('/comment', async (req,res) => {
     console.log('req.body!!', req.body);
     const savedComment = await MongoComments.create(req.body);
     res.json(savedComment)
   })
 
+  router.delete('/comment', async (req,res) => {
+    console.log('req.body!!', req.body);
+    const deletedComment = await MongoComments.deleteOne(req.body);
+    res.json(deletedComment)
+  })
 
-  
+  router.get('/cat', (req, res) => {
+    res.json('router/cat')
+  })
+
+  router.get('/dog', (req, res) => {
+    res.json('router/dog')
+  })
+
+  router.get('/sad', (req, res) => {
+    res.json('router/sad')
+  })
 
 module.exports = router

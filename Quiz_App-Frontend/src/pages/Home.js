@@ -28,6 +28,8 @@ import { useNavigate } from "react-router-dom";
         };
       const posts = await fetch('/quizzes', requestOptions)
       //const cleanPosts = await posts.json()
+      document.getElementById('displayNameBox').value=""
+      alert("Display name has been saved!!")
   }
 
 console.log("name", name)
@@ -52,11 +54,14 @@ const saveComment = async () => {
   const cleanData = await data.json()
   console.log('We saved!', cleanData)
   grabComments()
+  document.getElementById('commentBox').value=""
+  document.getElementById('commentNameBox').value=""
 }
 
 useEffect(()=> {
   grabComments()
 },[])
+
 //console.log('comments', comment)
 console.log('commentsData', commentsData)
 return (
@@ -76,10 +81,13 @@ return (
       </Button>
       <br></br>
       <br></br>
+      <br></br>
+      <br></br>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label className="Homepage">Comment Section</Form.Label>
         <br></br>
-        <Form.Control onChange={(e)=> {
+        <br></br>
+        <Form.Control id="commentNameBox" onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           title(e.target.value)
           }} type="commentsection" placeholder="Display Name" />
@@ -87,7 +95,9 @@ return (
         </Form.Text>
         <br></br>
         <br></br>
-        <Form.Control className="special" onChange={(e)=> {
+        <br></br>
+        <br></br>
+        <Form.Control id="commentBox" className="special" onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           setComment(e.target.value)
           }} type="commentsection" placeholder="Enter your comment!" />
@@ -95,15 +105,15 @@ return (
       <Button className="Button2"id="submitButton" onClick={saveComment} variant="primary">
         Submit a comment!
       </Button>
-      <div>
+      <Form.Text>
+      <h3>Comments</h3>
       <AllPosts comments={commentsData}/>
-    </div> 
+    </Form.Text>
     </Form>
 
 
 // pushing test
   );
-}
-
+        }
   
 export default Home

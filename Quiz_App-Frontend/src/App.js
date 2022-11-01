@@ -5,7 +5,7 @@ import { Quiz } from "./pages/Quiz";
 import React, { useState } from 'react';
 import { Cat } from './pages/cat';
 import { Dog } from './pages/dog';
-import { Questions } from "./pages/questions";
+import { Sad } from './pages/sad';
 
 function App() {
 
@@ -23,14 +23,14 @@ function App() {
     </ul>
   </nav>
   <body>
-    <h2 className="grid-conatiner" ></h2>
+    <h2 className="grid-container" ></h2>
   </body>
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/Quiz" element={<Quiz />}/>
     <Route path="/Cat" element={<Cat />} />
     <Route path="/Dog" element={<Dog />} />
-    <Route path="/Questions" element={<Questions />} />
+    <Route path="/Sad" element={<Sad />} />
   </Routes>
     </>
 
