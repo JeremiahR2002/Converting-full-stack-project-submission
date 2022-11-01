@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import { useNavigate } from "react-router-dom";
-import AllPosts from "../Components/allPosts";
+import React, { useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
+import AllPosts from '../Components/allPosts';
+import '../Answer.css';
 
 const Home = () => {
   console.log("We got clicked!");
@@ -60,10 +61,10 @@ const Home = () => {
     grabComments();
   }, []);
 
-  //console.log('comments', comment)
-  console.log("commentsData", commentsData);
-  return (
-    <Form>
+//console.log('comments', comment)
+console.log('commentsData', commentsData)
+return (
+    <Form className='Standard'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Text className="text-muted">
           Enter your Display Name and proceed!
@@ -79,7 +80,7 @@ const Home = () => {
           placeholder="Display Name"
         />
       </Form.Group>
-      <Button id="submitButton" onClick={saveName} variant="primary">
+      <Button className="Button"id="submitButton" onClick={saveName}  variant="primary">
         Submit
       </Button>
       <br></br>
@@ -99,17 +100,12 @@ const Home = () => {
         <Form.Text className="text-muted"></Form.Text>
         <br></br>
         <br></br>
-        <Form.Control
-          id="commentBox"
-          onChange={(e) => {
-            console.log("WE R TYPING on change happening!!");
-            setComment(e.target.value);
-          }}
-          type="commentsection"
-          placeholder="Enter your comment!"
-        />
+        <Form.Control className='special' id="commentBox" onChange={(e)=> {
+          console.log('WE R TYPING on change happening!!')
+          setComment(e.target.value)
+          }} type="commentsection" placeholder="Enter your comment!" />
       </Form.Group>
-      <Button id="submitButton" onClick={saveComment} variant="primary">
+      <Button className="Button2" id="submitButton" onClick={saveComment} variant="primary">
         Submit a comment!
       </Button>
       <Form.Text>
