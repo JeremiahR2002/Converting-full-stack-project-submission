@@ -1,8 +1,10 @@
 .comment  {
-  color: red;
-  background-color: white;
-  border: 3px dashed;
-  position: relative;
+  color: #212daa;
+  background-color: #e8b7e5;
+  border: 3px solid;
+  position: absolute static;
+  margin-left: auto;
+  margin-right: auto;
   height: 75px;
   width: 500px;
   font-size: small;
