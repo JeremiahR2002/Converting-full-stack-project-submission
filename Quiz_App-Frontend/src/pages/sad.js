@@ -1,1 +1,1 @@
-<h1>We cant figure out what you are... Have a picture of a lemur instead!</h1>
+<h1>We cant figure out what you are...try again but pick something else!</h1>

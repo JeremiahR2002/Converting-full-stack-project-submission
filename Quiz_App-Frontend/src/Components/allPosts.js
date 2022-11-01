@@ -1,11 +1,19 @@
+//import '../App.css';
+
 function AllPosts(props) {
+
+    const style = {
+        post: {
+            backgroundColor: 'red'
+        }
+    }
     return (
         <div>
-            {props.posts.map((post)=> {
+            {props.comments.map((comment)=> {
                 return (
-                    <div className={'post'}>
-                        <h1>{post.title}</h1>
-                        <p>{post.body}</p>
+                    <div className={'comment'}>
+                        <h4 className="again">{comment.title}</h4>
+                        <p>{comment.body}</p>
                     </div>
                 )
             })}

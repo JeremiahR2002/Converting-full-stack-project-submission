@@ -4,3 +4,49 @@
     text-align: center;
     bottom: 50px;
 };
+
+.post {
+    border-style: double;
+    color: red;
+    background-color: blue;
+}
+
+.Standard {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    bottom: 90px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+.Button {
+    font-size: 20px;
+    border: 2px solid;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.Homepage {
+    border: 2px solid;
+    padding: 5px;
+}
+
+.special {
+    position: relative;
+    bottom: 40px;
+}
+
+.Button2 {
+    font-size: 20px;
+    border: 2px solid;
+    position: relative;
+    bottom: 40px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.title {
+    text-align: Center;
+    font-size: 50px;
+    position: relative;
+    bottom: 35px;
+    font-family: "Times New Roman", Times, serif;
+}

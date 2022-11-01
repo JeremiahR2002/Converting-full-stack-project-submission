@@ -78,6 +78,8 @@ export function Quiz() {
             />
           </div>
         ))}
+
+        
       </Form>
       <Button onClick={answer} variant="dark">Lets see what you are!</Button>
       </>
