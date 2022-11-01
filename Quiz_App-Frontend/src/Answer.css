@@ -1,8 +1,11 @@
 .Images {
  text-align: center;
- position: relative;
- left: 750px;
+ position: absolute static;
+ left: 960px;
  height: 500px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .Answer {
@@ -10,6 +13,7 @@
     font-size: 100px;
     text-align: center;
     bottom: 50px;
+
 };
 
 .post {
@@ -65,12 +69,20 @@
 }
 
 .MonkPicture {
-    position: relative;
-    left: 650px;
+    position: absolute static;
+    left: 960px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .CatImages {
     text-align: center;
-    position: relative;
-    left: 500px;
+    position: absolute static;
+    left: 960px;
     height: 500px;
+    bottom: 50px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+
    }
