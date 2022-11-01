@@ -51,7 +51,7 @@ export function Quiz() {
           <div key={`inline-${type}`} className="grid-container">
             <Form.Check
               inline
-              label="Totally!"
+              label="What do you like to do in your free time?"
               name="group1"
               type={type}
               id={`inline-${type}-1`}
@@ -59,7 +59,7 @@ export function Quiz() {
             />
             <Form.Check
               inline
-              label="2"
+              label="sample"
               link href = "./Forum.css"
               name="group1"
               type={type}
@@ -68,7 +68,7 @@ export function Quiz() {
             />
             <Form.Check
               inline
-              label="3"
+              label="sample"
               name="group1"
               type={type}
               id={`inline-${type}-3`}
@@ -76,7 +76,7 @@ export function Quiz() {
             />
             <Form.Check
               inline
-              label="4"
+              label="sample"
               name="group1"
               type={type}
               id={`inline-${type}-4`}
@@ -88,12 +88,12 @@ export function Quiz() {
         
       </Form>
       <answer></answer>
-      <Form className='Form1'>
+      <Form className='Form2'>
         {[ 'radio' ].map((type) => (
           <div key={`inline-${type}`} className="grid-container">
             <Form.Check
               inline
-              label="Totally!"
+              label="Which do you like more?"
               name="group1"
               type={type}
               id={`inline-${type}-1`}
@@ -101,7 +101,7 @@ export function Quiz() {
             />
             <Form.Check
               inline
-              label="2"
+              label="Autumn"
               link href = "./Forum.css"
               name="group1"
               type={type}
@@ -110,7 +110,7 @@ export function Quiz() {
             />
             <Form.Check
               inline
-              label="3"
+              label="Spring"
               name="group1"
               type={type}
               id={`inline-${type}-3`}
@@ -118,7 +118,7 @@ export function Quiz() {
             />
             <Form.Check
               inline
-              label="4"
+              label=""
               name="group1"
               type={type}
               id={`inline-${type}-4`}
@@ -135,7 +135,7 @@ export function Quiz() {
           <div key={`inline-${type}`} className="grid-container">
             <Form.Check
               inline
-              label="Totally!"
+              label="What do you do in your free time?"
               name="group1"
               type={type}
               id={`inline-${type}-1`}
@@ -143,7 +143,7 @@ export function Quiz() {
             />
             <Form.Check
               inline
-              label="2"
+              label="Hiking"
               link href = "./Forum.css"
               name="group1"
               type={type}
@@ -152,7 +152,7 @@ export function Quiz() {
             />
             <Form.Check
               inline
-              label="3"
+              label="Going out with friends"
               name="group1"
               type={type}
               id={`inline-${type}-3`}
@@ -160,7 +160,7 @@ export function Quiz() {
             />
             <Form.Check
               inline
-              label="4"
+              label="Staying inside and having a drink"
               name="group1"
               type={type}
               id={`inline-${type}-4`}
