@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
 import AllPosts from '../Components/allPosts';
-import { useNavigate } from "react-router-dom";
+import '../Answer.css';
 
   const Home = () => {
     console.log("We got clicked!");
@@ -11,13 +12,11 @@ import { useNavigate } from "react-router-dom";
     const [comment, setComment] = useState('')
     const [commentTitle, title] = useState('')
     const [commentsData, setCommentsData] = useState([])
-    const [id, setId] = useState();
-    const navigate = useNavigate();
-
-    // const proceed = (e) => {
-    //   navigate.push("/quiz", { id });
-    // };
-
+    
+    const navigate = useNavigate()
+    function navigateToQuiz(){
+      navigate("/Quiz")
+    };
     const saveName = async () => {
         const requestOptions = {
           method: 'POST',
@@ -29,7 +28,8 @@ import { useNavigate } from "react-router-dom";
       const posts = await fetch('/quizzes', requestOptions)
       //const cleanPosts = await posts.json()
       document.getElementById('displayNameBox').value=""
-      alert("Display name has been saved!!")
+      navigateToQuiz();
+
   }
 
 console.log("name", name)
@@ -67,25 +67,22 @@ console.log('commentsData', commentsData)
 return (
     <Form className='Standard'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-      <Form.Text className="Homepage">
+      <Form.Text className="text-muted">
           Enter your Display Name and proceed!
         </Form.Text>
         <br></br>
-        <Form.Control onChange={(e)=> {
+        <Form.Control id="displayNameBox" onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           setName(e.target.value)
           }} type="displayname" placeholder="Display Name" />
       </Form.Group>
-      <Button className = "Button" id="submitButton" onClick={saveName}  variant="primary">
+      <Button className="Button"id="submitButton" onClick={saveName}  variant="primary">
         Submit
       </Button>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label className="Homepage">Comment Section</Form.Label>
-        <br></br>
+        <Form.Label>Comment Section</Form.Label>
         <br></br>
         <Form.Control id="commentNameBox" onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
@@ -95,14 +92,12 @@ return (
         </Form.Text>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
-        <Form.Control id="commentBox" className="special" onChange={(e)=> {
+        <Form.Control className='special' id="commentBox" onChange={(e)=> {
           console.log('WE R TYPING on change happening!!')
           setComment(e.target.value)
           }} type="commentsection" placeholder="Enter your comment!" />
       </Form.Group>
-      <Button className="Button2"id="submitButton" onClick={saveComment} variant="primary">
+      <Button className="Button2" id="submitButton" onClick={saveComment} variant="primary">
         Submit a comment!
       </Button>
       <Form.Text>

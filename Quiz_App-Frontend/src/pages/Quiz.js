@@ -3,7 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 import questions from './questions';
-
+import answer from './questions';
+import '../Forum.css';
 export function Quiz() {
   let array = [0,];
   console.log(array);
@@ -37,12 +38,225 @@ export function Quiz() {
     // window.location.href = "http://localhost:3000/dog";
     Navigate("/dog");
   }
+  if (sum == 30) {
+    Navigate("/sad");
+  }
 }
 
 
     return (
       <>
-        <Form>
+        <Form className='Form1'>
+        {[ 'radio' ].map((type) => (
+          <div key={`inline-${type}`} className="grid-container">
+            <Form.Check
+              inline
+              label="Totally!"
+              name="group1"
+              type={type}
+              id={`inline-${type}-1`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="2"
+              link href = "./Forum.css"
+              name="group1"
+              type={type}
+              id={`inline-${type}-2`}
+              onClick={dogquestion}
+            />
+            <Form.Check
+              inline
+              label="3"
+              name="group1"
+              type={type}
+              id={`inline-${type}-3`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="4"
+              name="group1"
+              type={type}
+              id={`inline-${type}-4`}
+              onClick={dogquestion}
+            />
+          </div>
+        ))}
+
+        
+      </Form>
+      <answer></answer>
+      <Form className='Form1'>
+        {[ 'radio' ].map((type) => (
+          <div key={`inline-${type}`} className="grid-container">
+            <Form.Check
+              inline
+              label="Totally!"
+              name="group1"
+              type={type}
+              id={`inline-${type}-1`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="2"
+              link href = "./Forum.css"
+              name="group1"
+              type={type}
+              id={`inline-${type}-2`}
+              onClick={dogquestion}
+            />
+            <Form.Check
+              inline
+              label="3"
+              name="group1"
+              type={type}
+              id={`inline-${type}-3`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="4"
+              name="group1"
+              type={type}
+              id={`inline-${type}-4`}
+              onClick={dogquestion}
+            />
+          </div>
+        ))}
+
+        
+      </Form>
+      
+      <Form>
+        {[ 'radio' ].map((type) => (
+          <div key={`inline-${type}`} className="grid-container">
+            <Form.Check
+              inline
+              label="Totally!"
+              name="group1"
+              type={type}
+              id={`inline-${type}-1`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="2"
+              link href = "./Forum.css"
+              name="group1"
+              type={type}
+              id={`inline-${type}-2`}
+              onClick={dogquestion}
+            />
+            <Form.Check
+              inline
+              label="3"
+              name="group1"
+              type={type}
+              id={`inline-${type}-3`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="4"
+              name="group1"
+              type={type}
+              id={`inline-${type}-4`}
+              onClick={dogquestion}
+            />
+          </div>
+        ))}
+
+        
+      </Form>
+
+      <Form>
+        {[ 'radio' ].map((type) => (
+          <div key={`inline-${type}`} className="grid-container">
+            <Form.Check
+              inline
+              label="Totally!"
+              name="group1"
+              type={type}
+              id={`inline-${type}-1`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="2"
+              link href = "./Forum.css"
+              name="group1"
+              type={type}
+              id={`inline-${type}-2`}
+              onClick={dogquestion}
+            />
+            <Form.Check
+              inline
+              label="3"
+              name="group1"
+              type={type}
+              id={`inline-${type}-3`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="4"
+              name="group1"
+              type={type}
+              id={`inline-${type}-4`}
+              onClick={dogquestion}
+            />
+          </div>
+        ))}
+
+        
+      </Form>
+
+      <Form>
+        {[ 'radio' ].map((type) => (
+          <div key={`inline-${type}`} className="grid-container">
+            <Form.Check
+              inline
+              label="Totally!"
+              name="group1"
+              type={type}
+              id={`inline-${type}-1`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="2"
+              link href = "./Forum.css"
+              name="group1"
+              type={type}
+              id={`inline-${type}-2`}
+              onClick={dogquestion}
+            />
+            <Form.Check
+              inline
+              label="3"
+              name="group1"
+              type={type}
+              id={`inline-${type}-3`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="4"
+              name="group1"
+              type={type}
+              id={`inline-${type}-4`}
+              onClick={dogquestion}
+            />
+          </div>
+        ))}
+
+        
+      </Form>
+
+      <Form>
         {[ 'radio' ].map((type) => (
           <div key={`inline-${type}`} className="grid-container">
             <Form.Check
