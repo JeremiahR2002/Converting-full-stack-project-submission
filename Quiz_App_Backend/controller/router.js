@@ -38,11 +38,11 @@ router.post('/', (req, res) => {
     res.json(savedComment)
   })
 
-  router.delete('/comment', async (req,res) => {
-    console.log('req.body!!', req.body);
-    const deletedComment = await MongoComments.deleteOne(req.body);
-    res.json(deletedComment)
-  })
+  // router.delete('/comment', async (req,res) => {
+  //   console.log('req.body!!', req.body);
+  //   const deletedComment = await MongoComments.deleteOne(req.body);
+  //   res.json(deletedComment)
+  // })
 
   router.get('/cat', (req, res) => {
     res.json('router/cat')
