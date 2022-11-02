@@ -1,11 +1,15 @@
 import { Container, grid } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import questions from './questions';
 import answer from './questions';
 import '../Forum.css';
 export function Quiz() {
+
+  const params = useParams()
+  console.log(params);
+
   let array = [0,];
   console.log(array);
 
@@ -32,13 +36,13 @@ export function Quiz() {
   
   if (sum <= 29) {
     // window.location.href = "http://localhost:3000/cat";
-    Navigate("/cat");
+    Navigate(`/cat?name=${params}`);
   }
   else if (sum => 31) {
     // window.location.href = "http://localhost:3000/dog";
-    Navigate("/dog");
+    Navigate(`/dog`);
   }
-  if (sum == 30) {
+  if (sum === 30) {
     Navigate("/sad");
   }
 }
@@ -49,14 +53,9 @@ export function Quiz() {
         <Form className='Form1'>
         {[ 'radio' ].map((type) => (
           <div key={`inline-${type}`} className="grid-container">
-            <Form.Check
-              inline
-              label="Which do you prefer?"
-              name="group1"
-              type={type}
-              id={`inline-${type}-1`}
-              onClick={catquestion}
-            />
+            <label>
+              Which do you prefer?
+            </label>
             <Form.Check
               inline
               label="City"
@@ -64,7 +63,7 @@ export function Quiz() {
               name="group1"
               type={type}
               id={`inline-${type}-2`}
-              onClick={dogquestion}
+              onClick={catquestion}
             />
             <Form.Check
               inline
@@ -72,41 +71,51 @@ export function Quiz() {
               name="group1"
               type={type}
               id={`inline-${type}-3`}
-              onClick={catquestion}
+              onClick={dogquestion}
             />
           </div>
         ))}
 
         
       </Form>
-      <answer></answer>
-      <Form className='Form2'>
+      <Form className='Form1'>
         {[ 'radio' ].map((type) => (
           <div key={`inline-${type}`} className="grid-container">
+            <label>
+              What do you do in your free time?
+            </label>
             <Form.Check
               inline
-              label="Which do you like more?"
-              name="group1"
+              label="Go hiking"
+              name="group2"
               type={type}
               id={`inline-${type}-1`}
-              onClick={catquestion}
-            />
-            <Form.Check
-              inline
-              label="Autumn"
-              link href = "./Forum.css"
-              name="group1"
-              type={type}
-              id={`inline-${type}-2`}
               onClick={dogquestion}
             />
             <Form.Check
               inline
-              label="Spring"
-              name="group1"
+              label="Staying inside and having a drink"
+              link href = "./Forum.css"
+              name="group2"
+              type={type}
+              id={`inline-${type}-2`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="Take a long nap"
+              name="group2"
               type={type}
               id={`inline-${type}-3`}
               onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="Going out with friends"
+              name="group2"
+              type={type}
+              id={`inline-${type}-3`}
+              onClick={dogquestion}
             />
           </div>
         ))}
@@ -114,39 +123,117 @@ export function Quiz() {
         
       </Form>
       
-      <Form>
-        <Form className='Form3'></Form>
+      <Form className='Form1'>
+        <Form className='Form1'></Form>
         {[ 'radio' ].map((type) => (
           <div key={`inline-${type}`} className="grid-container">
+            <label>
+              Do you like socializing?
+            </label>
             <Form.Check
               inline
-              label="What do you do in your free time?"
-              name="group1"
+              label="Yes"
+              name="group3"
+              type={type}
+              id={`inline-${type}-1`}
+              onClick={dogquestion}
+            />
+            <Form.Check
+              inline
+              label="No"
+              link href = "./Forum.css"
+              name="group3"
+              type={type}
+              id={`inline-${type}-2`}
+              onClick={catquestion}
+            />
+            <Form.Check
+              inline
+              label="All the time"
+              name="group3"
+              type={type}
+              id={`inline-${type}-3`}
+              onClick={dogquestion}
+            />
+            <Form.Check
+              inline
+              label="What's socializing?"
+              name="group3"
+              type={type}
+              id={`inline-${type}-4`}
+              onClick={catquestion}
+            />
+          </div>
+        ))}
+
+        
+      </Form>
+
+      <Form className='Form1'>
+        <Form className='Form1'></Form>
+        {[ 'radio' ].map((type) => (
+          <div key={`inline-${type}`} className="grid-container">
+            <label>
+              Which season do you like?
+            </label>
+            <Form.Check
+              inline
+              label="Autumn"
+              name="group4"
+              type={type}
+              id={`inline-${type}-1`}
+              onClick={dogquestion}
+            />
+            <Form.Check
+              inline
+              label="Spring"
+              link href = "./Forum.css"
+              name="group4"
+              type={type}
+              id={`inline-${type}-2`}
+              onClick={catquestion}
+            />
+          </div>
+        ))}
+
+        
+      </Form>
+
+      <Form className='Form1'>
+        {[ 'radio' ].map((type) => (
+          <div key={`inline-${type}`} className="grid-container">
+            <label>
+              What is your favorite drink at the bar?
+            </label>
+            <Form.Check
+              inline
+              label="Gin/tonic"
+              name="group5"
               type={type}
               id={`inline-${type}-1`}
               onClick={catquestion}
             />
             <Form.Check
               inline
-              label="Hiking"
+              label="Tequila shots"
               link href = "./Forum.css"
-              name="group1"
+              name="group5"
               type={type}
               id={`inline-${type}-2`}
               onClick={dogquestion}
             />
             <Form.Check
               inline
-              label="Going out with friends"
-              name="group1"
+              label="Martini"
+              name="group5"
               type={type}
               id={`inline-${type}-3`}
               onClick={catquestion}
             />
             <Form.Check
               inline
-              label="Staying inside and having a drink"
-              name="group1"
+              label="Beer"
+              name="group5"
               type={type}
               id={`inline-${type}-4`}
               onClick={dogquestion}
@@ -157,117 +244,27 @@ export function Quiz() {
         
       </Form>
 
-      <Form>
-        <Form className='Form4'></Form>
+      <Form className='Form1'>
         {[ 'radio' ].map((type) => (
           <div key={`inline-${type}`} className="grid-container">
-            <Form.Check
-              inline
-              label="How do you describe your personality?"
-              name="group1"
-              type={type}
-              id={`inline-${type}-1`}
-              onClick={catquestion}
-            />
+            <label>
+              How would you describe your personality?
+            </label>
             <Form.Check
               inline
               label="Introvert"
-              link href = "./Forum.css"
-              name="group1"
-              type={type}
-              id={`inline-${type}-2`}
-              onClick={dogquestion}
-            />
-            <Form.Check
-              inline
-              label="Extrovert"
-              name="group1"
-              type={type}
-              id={`inline-${type}-3`}
-              onClick={catquestion}
-            />
-          </div>
-        ))}
-
-        
-      </Form>
-
-      <Form>
-        {[ 'radio' ].map((type) => (
-          <div key={`inline-${type}`} className="grid-container">
-            <Form.Check
-              inline
-              label="Totally!"
-              name="group1"
+              name="group6"
               type={type}
               id={`inline-${type}-1`}
               onClick={catquestion}
             />
             <Form.Check
               inline
-              label="2"
+              label="Extravert"
               link href = "./Forum.css"
-              name="group1"
+              name="group6"
               type={type}
               id={`inline-${type}-2`}
-              onClick={dogquestion}
-            />
-            <Form.Check
-              inline
-              label="3"
-              name="group1"
-              type={type}
-              id={`inline-${type}-3`}
-              onClick={catquestion}
-            />
-            <Form.Check
-              inline
-              label="4"
-              name="group1"
-              type={type}
-              id={`inline-${type}-4`}
-              onClick={dogquestion}
-            />
-          </div>
-        ))}
-
-        
-      </Form>
-
-      <Form>
-        {[ 'radio' ].map((type) => (
-          <div key={`inline-${type}`} className="grid-container">
-            <Form.Check
-              inline
-              label="Totally!"
-              name="group1"
-              type={type}
-              id={`inline-${type}-1`}
-              onClick={catquestion}
-            />
-            <Form.Check
-              inline
-              label="2"
-              link href = "./Forum.css"
-              name="group1"
-              type={type}
-              id={`inline-${type}-2`}
-              onClick={dogquestion}
-            />
-            <Form.Check
-              inline
-              label="3"
-              name="group1"
-              type={type}
-              id={`inline-${type}-3`}
-              onClick={catquestion}
-            />
-            <Form.Check
-              inline
-              label="4"
-              name="group1"
-              type={type}
-              id={`inline-${type}-4`}
               onClick={dogquestion}
             />
           </div>

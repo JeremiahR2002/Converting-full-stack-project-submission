@@ -15,7 +15,7 @@ const Home = () => {
 
   const navigate = useNavigate();
   function navigateToQuiz() {
-    navigate("/Quiz");
+    navigate(`/Quiz?name=${name}`);
   }
   const saveName = async () => {
     const requestOptions = {
