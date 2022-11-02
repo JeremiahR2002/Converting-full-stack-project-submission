@@ -57,6 +57,11 @@ const Home = () => {
     document.getElementById("commentNameBox").value = "";
   };
 
+  // const deleteComment = () =>{
+  //   commentsData.deleteOne(title).then(()=> {
+  //     commentsData.context.router.push('/')
+  //   })
+  // }
   useEffect(() => {
     grabComments();
   }, []);
@@ -103,6 +108,9 @@ return (
       <Button className="Button2" id="submitButton" onClick={saveComment} variant="primary">
         Submit a comment!
       </Button>
+      {/* <Button className="Button2" id="deleteButton" onClick={deleteComment} variant="primary">
+        Delete
+      </Button> */}
       <Form.Text>
         <h3>Comments</h3>
         <AllPosts comments={commentsData} />

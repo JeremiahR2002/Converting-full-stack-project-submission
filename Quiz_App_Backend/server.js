@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
   
 app.use('/quizzes', router)
 
-// app.use(express.static(path.join(__dirname, '../Quiz_App-Frontend/build', 'build')))
+app.use(express.static(path.join(__dirname, 'Quiz_App-Frontend', 'build')))
 
 app.listen(process.env.PORT, () => {
     console.log("I am alive port " + process.env.PORT)
